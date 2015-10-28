@@ -192,7 +192,9 @@
             }
         }
         
-        [address setObject:[values componentsJoinedByString:@", "]forKey: label];
+        if (label != nil) {
+            [address setObject:[values componentsJoinedByString:@", "]forKey: label];
+        }
     }
     
     NSString *imageURL = [self imageURLForRecord:person fullName:fullName];
